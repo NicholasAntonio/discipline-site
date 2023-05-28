@@ -1,5 +1,6 @@
 count = 1;
 document.getElementById("radio1").checked = true;
+const nav = document.getElementById('navbar');
 
 setInterval(function(){
     next()
@@ -12,3 +13,12 @@ function next(){
     }
     document.getElementById("radio" + count).checked = true
 }
+
+window.addEventListener('scroll', () =>{
+    if(window.scrollY >= 100){
+        nav.classList.add('navbarBlack');
+    }else{
+        nav.classList.remove('navbarBlack');
+    }
+}
+)

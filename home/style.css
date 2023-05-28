@@ -9,7 +9,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(
     to bottom,
     #000000,
@@ -25,12 +25,8 @@ body {
     #350402,
     #3d0000
   );
-}
-
-nav .navid {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 header nav {
@@ -38,10 +34,23 @@ header nav {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100px;
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   text-transform: uppercase;
+  transition: all 0.5s;
+  z-index: 1;
+}
+nav .navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbarBlack{
+  background-color: #111;
 }
 
 header .logo {
@@ -52,17 +61,18 @@ header .logo {
   padding: 8px;
 }
 
-nav .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#mobile-menu {
+  color: white;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
 }
+
 
 nav .nav-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 100px;
   gap: 50px;
 }
 
@@ -148,14 +158,36 @@ nav .login-register a:hover {
 
 .main-left {
   max-width: 600px;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
 }
 
 .main-left h1 {
   font-style: italic;
   font-weight: 800;
+}
+
+.description{
+  max-height: 800px;
+  overflow-y: scroll;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1e9e9;
+}
+
+ *::-webkit-scrollbar-thumb {
+  background-color: rgb(107, 22, 22);
+  border-radius: 10px;
+  border: 3px solid #ffffff;
 }
 
 h2 {
@@ -318,4 +350,53 @@ h2 {
 
 #radio3:checked ~ .nav-auto .auto-btn3 {
   background-color: rgb(107, 22, 22);
+}
+
+
+@media (max-width: 1780px){
+  .main-left{
+    transform: scale(0.8)
+   }
+}
+
+@media (max-width:1600px){
+  .main-left{
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width:1450px){
+  .main-content{
+    flex-direction: column-reverse;
+    padding-top: 60rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width:1400px){
+  nav .nav-links{
+    display: none;
+  }
+  nav #mobile-menu{
+    display: block;
+  }
+}
+
+@media (max-width:800px){
+  .slider{
+    transform: scale(0.8);
+  }
+
+}
+
+@media (max-width:600px){
+  .slider{
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 400px){
+  .slider{
+    transform: scale(0.4);
+  }
 }
