@@ -375,7 +375,33 @@ h2 {
 
 @media (max-width:1400px){
   nav .nav-links{
-    display: none;
+    height: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #111;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  nav .nav-links.active{
+    height: 450px;
+  }
+
+  nav .nav-links.active a{
+    opacity: 1;
+  }
+  
+  nav .nav-links a{
+    display: block;
+    width : fit-content;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
   }
   nav #mobile-menu{
     display: block;
