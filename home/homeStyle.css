@@ -42,15 +42,12 @@ header nav {
   text-transform: uppercase;
   transition: all 0.5s;
   z-index: 1;
+  background-color: #111;
 }
 nav .navbar {
   display: flex;
   justify-content: space-between;
   width: 100%;
-}
-
-.navbarBlack{
-  background-color: #111;
 }
 
 header .logo {
@@ -357,6 +354,9 @@ h2 {
   .main-left{
     transform: scale(0.8)
    }
+   .main-right{
+    transform: scale(0.8);
+   }
 }
 
 @media (max-width:1600px){
@@ -421,7 +421,7 @@ h2 {
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 414px){
   .slider{
     transform: scale(0.4);
   }
