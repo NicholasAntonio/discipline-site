@@ -169,7 +169,7 @@ main {
 }
 
 aside * {
-  animation: entry 0.8s ease-in;
+  animation: entry 2s ease;
 }
 
 aside {
@@ -221,6 +221,7 @@ section {
   padding: 64px;
   grid-area: content;
   overflow-y: scroll;
+  animation: entry2 2s ease;
 }
 
 .equips {

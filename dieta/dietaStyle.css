@@ -170,7 +170,7 @@ body {
   }
   
   aside * {
-    animation: entry 0.8s ease-in;
+    animation: entry 2s ease;
   }
   
   aside {
@@ -215,6 +215,7 @@ body {
     padding: 64px;
     grid-area: content;
     overflow-y: scroll;
+    animation: entry2 2s ease;
   }
   
   .tips {

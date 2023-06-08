@@ -73,7 +73,8 @@ nav .nav-links {
   gap: 50px;
 }
 
-nav .nav-links a {
+nav .nav-links a,
+nav .nav-links button{
   text-decoration: none;
   color: rgba(255, 255, 255, 0.678);
   font-size: 18px;
@@ -82,11 +83,13 @@ nav .nav-links a {
   position: relative;
 }
 
-nav .nav-links a:hover {
+nav .nav-links a:hover,
+nav .nav-links button:hover{
   color: rgb(107, 22, 22);
 }
 
-nav .nav-links a::after {
+nav .nav-links a::after,
+nav .nav-links button::after {
   content: " ";
   width: 0%;
   height: 2px;
@@ -97,15 +100,17 @@ nav .nav-links a::after {
   transition: 0.5s ease-in;
 }
 
-nav .nav-links a:hover::after {
+nav .nav-links a:hover::after,
+nav .nav-links button:hover::after {
   width: 100%;
 }
 
-nav .login-register {
+nav .btn-login-register {
   align-self: center;
+  background: transparent;
 }
 
-nav .login-register a {
+nav .btn-login-register {
   padding: 5px;
   position: relative;
   display: inline-flex;
@@ -115,33 +120,20 @@ nav .login-register a {
   border: 2px solid rgba(255, 255, 255, 0.678);
   border-radius: 8px;
   font-size: 19px;
+  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.678);
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
   z-index: 1;
   overflow: hidden;
+  cursor: pointer;
 }
 
-nav .login-register a::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background: rgb(107, 22, 22);
-  z-index: -1;
-  transition: 0.5s;
-}
 
-nav .login-register a:hover::before {
-  width: 100%;
-}
 
-nav .login-register a:hover {
+nav .btn-login-register:hover {
   border: 2px solid rgb(107, 22, 22);
-  color: black;
 }
 
 .main-content {
@@ -161,6 +153,7 @@ nav .login-register a:hover {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  animation: entry 2s ease;
 }
 
 .main-left h1 {
@@ -252,6 +245,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: entry2 3s ease;
 }
 
 .slider {
@@ -379,6 +373,7 @@ h2 {
     position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: unset;
     top: 80px;
     left: 0;
     right: 0;
@@ -389,14 +384,16 @@ h2 {
   }
 
   nav .nav-links.active{
-    height: 450px;
+    height: 600px;
   }
 
-  nav .nav-links.active a{
+  nav .nav-links.active a,
+  nav .nav-links.active button{
     opacity: 1;
   }
   
-  nav .nav-links a{
+  nav .nav-links a,
+  nav .nav-links button{
     display: block;
     width : fit-content;
     text-align: center;

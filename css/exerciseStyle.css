@@ -191,6 +191,7 @@ main .row{
   font-size: 32px;
   font-weight: bolder;
   color: #9e9ea0;
+  animation: entry3 2s ease;
 }
 
 .row-card::-webkit-scrollbar {
@@ -202,6 +203,7 @@ main .row{
   display: flex;
   width: 100%;
   gap: 20px;
+  animation: entry2 2s ease;
 }
 
 .exercise-card {

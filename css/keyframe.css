@@ -1,0 +1,33 @@
+@keyframes entry {
+    from {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  @keyframes entry2 {
+    from {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes entry3{
+    from {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
