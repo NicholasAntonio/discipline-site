@@ -1,0 +1,20 @@
+.description a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #111;
+    border-bottom: 1px solid #111;
+    transition: all .2s ease-in;
+}
+
+.description a:hover{
+    color: rgb(157, 11, 11);
+    border-bottom: 1px solid rgb(157, 11, 11);
+}
+
+@media (min-width:1600px){
+    .cards{
+        justify-content: center;
+    }
+}
